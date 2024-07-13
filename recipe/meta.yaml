@@ -1,5 +1,5 @@
 {% set name = "rinohtype" %}
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rinohtype-{{ version }}.tar.gz
-  sha256: 3869229b498dd64dce3a196ed39583ee3771e21accddd67e80ae19a41a52c3ca
+  sha256: 2efc38b5f41541693617e5a4bc6826e8932897d3c14b1b0ecd3ae4aaff404224
 
 build:
   entry_points:
