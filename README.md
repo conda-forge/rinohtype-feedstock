@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rinohtype-feeds
 
 Home: https://github.com/brechtm/rinohtype
 
-Package license: AGPL-3.0
+Package license: AGPL-3.0-only
 
 Summary: The Python document processor
 
