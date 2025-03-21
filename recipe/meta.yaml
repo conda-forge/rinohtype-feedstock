@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rinohtype-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rinohtype-{{ version }}.tar.gz
   sha256: 2efc38b5f41541693617e5a4bc6826e8932897d3c14b1b0ecd3ae4aaff404224
 
 build:
@@ -14,15 +14,15 @@ build:
     - rinoh = rinoh.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - poetry-core >=1.0.8
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - appdirs >=1.4.3,<2.0.0
     - docutils >=0.15
     - importlib-metadata >=0.21, <8
@@ -39,6 +39,7 @@ test:
     - rinoh --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/brechtm/rinohtype
