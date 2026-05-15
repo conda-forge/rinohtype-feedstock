@@ -1,5 +1,5 @@
 {% set name = "rinohtype" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rinohtype-{{ version }}.tar.gz
-  sha256: 2efc38b5f41541693617e5a4bc6826e8932897d3c14b1b0ecd3ae4aaff404224
+  sha256: e9392bd4e9117f5bef1285b81d6420183df5393aed289b176f7a81b6c9646d15
 
 build:
   entry_points:
     - rinoh = rinoh.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
